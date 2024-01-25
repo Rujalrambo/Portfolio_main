@@ -7,25 +7,14 @@
   <style>
     body {
       font-family: 'Times New Roman', Times, serif;
-      line-height: 1.6;
-      margin: 20px;
-      background-color: #f7f7f7;
+      /* line-height: 1.6; */
+      margin: 0;
+      padding: 0;
+      background-color: #fcebcd;
       color: #333;
+      font-size: 1.5em;
     }
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background-color: #fbfdff;
-      color: #fff;
-      padding: auto;
-      border-radius: 10px;
-    }
-    h1{
-      color: #2980b9;
-    }
-    h2 {
+    h1 , h2 {
       color: #3498db;
       margin: 0;
     }
@@ -36,67 +25,146 @@
       object-fit: cover;
       margin-left: 20px;
     }
-    a {
-      color: #2980b9;
-      text-decoration: none;
+    nav{
+      background-color: #333;
     }
-
-    ul {
+    nav li{
+      float: left;
+    }
+    nav li a {
+      color: #333;
+      text-decoration: none;
+      display: block;
+      color: white;
+      /* text-align: center; */
+      padding: 14px 16px;
+    }
+    nav ul {
       list-style-type: none;
       padding: 0;
+      margin: 0;
+      overflow: hidden;
     }
+/* 
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #fbfdff;
+      color: #fff;
+      padding: auto;
+      border-radius: 10px;
+    } */
+    /* h1{
+      color: #2980b9;
+    } */
+
 
     li {
       margin-bottom: 10px;
+      /* float: left; */
+      list-style: none;
+      padding: 10px;
+      margin: 0;
+      /* display: flex; */
     }
 
-    .section {
+    section {
       margin-bottom: 30px;
-      background-color: #fff;
+      background-color:#f5e7ce;
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      height: 100;
     }
 
-    .summary {
+    /* .summary {
       font-style: italic;
       color: #555;
+    } */
+    #home{
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      display: flex;
+      height: 100vh;
     }
-
+    #about{
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      display: flex;
+      height: 100vh;
+    }
     .favorite-tech-stack {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
     }
 
-    .projects-list {
-      list-style: disc;
-      margin-left: 20px;
+    
+    .section ul { 
+      padding-left: 0;
     }
-
-    .project-item {
-      margin-bottom: 15px;
+    footer {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* background-color: black; */
+    padding: 14px 16px;
+    background-color: #333;
+}
+    footer a{
+      color: white;
+      text-decoration: none;
+      
     }
+    /* nav ul li{
+      list-style: none;
+      color: #333;
+      display: flex;
+    } */
   </style>
 </head>
 <body>
-
-  <header>
+  <nav>
+    <ul>
+        <li><a href="#home" id="home-link">Home</a></li>
+        <li><a href="#about" >About Me</a></li>
+        <li><a href="#contact" id="contact-link">Contact</a></li>
+        <li><a href="#languages" >Languages</a></li>
+        <li><a href="#education" >Education</a></li>
+        <li><a href="#tech-stack" >Tech Stacks</a></li>
+        <li><a href="#projects">Projects</a></li>
+        
+    </ul>
+</nav>
+  <section id="home">
     <div>
-      <h1>Rujal Shrestha</h1>
-    </div>
+      <h1>Welcome to My Website</h1>
+      <p>This is the homepage of my website. You can scroll down to learn more about me.</p>
+      </div>
     <img src="Photo.jpg">
-  </header>
+  </section>
 
-
+  <section id="about">
+    <div>
+    <h1>About Me</h1>
+    <p>"I'm Rujal Shrestha, a skilled computer engineer specializing in technologies like JavaScript, NodeJS, MongoDB & React Native. My experience includes developing a Signature Verification application, showcasing my problem-solving abilities and attention to detail. I thrive in collaborative environments, value effective communication, and am dedicated to staying at the forefront of technology trends. As a quick learner, I bring adaptability and a passion for innovation to every project</p>
+    </div>
+</section>
   <section class="section" id="contact">
-    <h2>Contact</h2>
+    <div>
+    <h1>Contact</h1>
     <ul>
       <li><strong>Address:</strong> Bansbari, Kathmandu, Nepal</li>
       <li><strong>Phone:</strong> +977 9823238200</li>
       <li><strong>Email:</strong> rujalshrestha77@gmail.com</li>
       <li><strong>GitHub:</strong> <a href="https://github.com/Rujalrambo" style="color: #27ae60;">https://github.com/Rujalrambo</a></li>
     </ul>
+  </div>
   </section>
 
   <section class="section" id="languages">
@@ -115,7 +183,7 @@
       <li>NodeJS</li>
       <li>MongoDB</li>
       <li>React Native</li>
-      <li>Python</li>
+      <!-- <li>Python</li> -->
     </ul>
   </section>
 
@@ -132,6 +200,13 @@
       <li class="project-item"><strong>Signature Verification:</strong> Signature Verification is an application related to verifying the authentication of an individual through the use of a signature. We use our model and compare it with others' signatures.</li>
     </ul>
   </section>
+  <footer>
+    <div class="download-button">
+      <a href="Desktop/NEW PROJECT/Portfolio/resume.pdf" download>
+          Download Resume
+      </a>
+  </div>
+  </footer>
   
 
 </body>
